@@ -27,6 +27,8 @@ The build system uses a docker image based on Fedora. While building the image, 
 
 This results in a fairly meaty image, but it's re-usable, and it should work across all versions of godot to date.
 
+An image is already available at `docker.io/razoric480/godot-learn-builder:1.0.0`
+
 ### build-godot.sh
 
 Pulls the Builder image from docker as defined in `.env`, mounts the build-output/ folder, loads the .env files, clones godot, and runs the start.sh script to compile.

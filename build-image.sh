@@ -7,7 +7,7 @@ if [[ ! -e "MacOSX${OSX_SDK_VERSION}.sdk.tar.xz" ]]; then
   exit 1
 fi
 
-podman build -t godot-builder -f image-specs.DockerFile .
+podman build -t godot-builder -f image-specs.DockerFile --env OSX_SDK_VERSION=${OSX_SDK_VERSION} .
 podman tag localhost/godot-builder docker.io/${DOCKER_USERNAME}/godot-learn-builder:${DOCKER_BUILDER_VERSION}
 if [ "${DOCKER_PUSH}" = "true" ]; then
   podman push docker.io/${DOCKER_USERNAME}/godot-learn-builder:${DOCKER_BUILDER_VERSION}

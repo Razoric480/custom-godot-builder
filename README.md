@@ -6,13 +6,13 @@ This repository serves to build a custom version of the Godot engine's templates
 
 All configuration is done by editing the `.env` file.
 
-- DOCKER_USERNAME: The username for docker.io where the builder image is stored.
-- DOCKER_BUILDER_VERSION: The version of the builder image to use when building godot.
-- DOCKER_PUSH: true|false; when running build-image.sh, whether to push the new image online or keep it in local storage.
-- OSX_SDK_VERSION: When running build-image.sh, will try to grab this SDK at the root of this repository.
-- GODOT_REPO: The repository to grab the Godot source from.
-- GODOT_BRANCH: The branch to grab the Godot source from.
-- PUBLISH_REPO: The repository that the release will end up in when running publish-release.sh.
+- `DOCKER_USERNAME`: The username for docker.io where the builder image is stored.
+- `DOCKER_BUILDER_VERSION`: The version of the builder image to use when building godot.
+- `DOCKER_PUSH`: true|false; when running build-image.sh, whether to push the new image online or keep it in local storage.
+- `OSX_SDK_VERSION`: When running build-image.sh, will try to grab this SDK at the root of this repository.
+- `GODOT_REPO`: The repository to grab the Godot source from.
+- `GODOT_BRANCH`: The branch to grab the Godot source from.
+- `PUBLISH_REPO`: The repository that the release will end up in when running publish-release.sh.
 
 ## Functions
 

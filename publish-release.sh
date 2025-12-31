@@ -2,7 +2,7 @@
 
 source ./.env
 
-curl -OL https://raw.githubusercontent.com/${GODOT_REPO}/refs/heads/${GODOT_BRANCH}/version.py version.py
+curl -OL https://raw.githubusercontent.com/${GODOT_REPO}/refs/heads/${GODOT_BRANCH}/version.py
 GODOT_VERSION=$(python -c "import pathlib; ns={}; exec(pathlib.Path('version.py').read_text(), ns); print(f\"{ns['major']}.{ns['minor']}.{ns['patch']}\")")
 rm -f version.py
 
@@ -22,5 +22,5 @@ if ! gh auth status >/dev/null 2>&1; then
 fi
 
 gh release delete "learn-${GODOT_VERSION}" --repo=${PUBLISH_REPO}
-gh create "learn-${GODOT_VERSION}" --repo=${PUBLISH_REPO} --title "Godot Learn ${GODOT_VERSION}" --notes "Automated release of custom Godot templates ${GODOT_VERSION}"
+gh release create "learn-${GODOT_VERSION}" --repo=${PUBLISH_REPO} --title "Godot Learn ${GODOT_VERSION}" --notes "Automated release of custom Godot templates ${GODOT_VERSION}"
 gh release upload "learn-${GODOT_VERSION}" "./build-output/godot-learn.${GODOT_VERSION}.templates.zip#Templates" "./build-output/godot-learn.${GODOT_VERSION}.headless.zip#Headless" "./build-output/godot-learn.${GODOT_VERSION}.editor.zip#Editor" --repo=${PUBLISH_REPO}

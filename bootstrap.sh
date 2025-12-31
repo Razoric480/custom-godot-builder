@@ -1,9 +1,6 @@
 #!/bin/bash
 
-cd /emsdk
-source ./emsdk_env.sh
-cd /
+mv /inject/start.sh /start.sh
 git clone -b ${GODOT_BRANCH} --depth=1 --single-branch https://github.com/${GODOT_REPO}.git
-cd godot
-chmod +x ${BUILD_SCRIPT}
-source ./${BUILD_SCRIPT}
+mv /inject/custom.py /godot/custom.py
+./start.sh

@@ -29,9 +29,9 @@ This results in a fairly meaty image, but it's re-usable, and it should work acr
 
 ### build-godot.sh
 
-Pulls the Builder image from docker as defined in `.env`, mounts the build-output/ folder, loads the .env files, and runs a build bash script in the root of the godot source repo.
+Pulls the Builder image from docker as defined in `.env`, mounts the build-output/ folder, loads the .env files, clones godot, and runs the start.sh script to compile.
 
-As of this writing, the script is compile_for_learn_gdscript.sh in the nathan/learn-gdscript-custom-build branch, and it:
+As of this writing, the script:
 
 1. Compiles the X11 editor
 2. Compiles the headless tools

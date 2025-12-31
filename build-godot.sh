@@ -14,4 +14,4 @@ fi
 
 rm -rf build-output
 mkdir build-output
-podman run --env-file ./.env --rm -v ./build-output:/output:Z ${DOCKER_URI}
+podman run --env-file ./.env --rm -v ./build-output:/output:Z -v ./inject:/inject:Z ${DOCKER_URI}

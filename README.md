@@ -31,7 +31,7 @@ An image is already available at `docker.io/razoric480/godot-learn-builder:1.0.0
 
 ### build-godot.sh
 
-Pulls the Builder image from docker as defined in `.env`, mounts the build-output/ folder, loads the .env files, clones godot, and runs the start.sh script to compile.
+Pulls the Builder image from docker as defined in `.env`, mounts the build-output/ folder, loads the .env files, clones godot, and copies files from the /inject dir for use in the image; namely a custom.py to control modules and the start.sh script to actually compile with.
 
 As of this writing, the script:
 

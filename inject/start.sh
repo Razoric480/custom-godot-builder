@@ -26,7 +26,7 @@ strip bin/godot.x11.opt.64
 chmod +x bin/godot.x11.opt.64
 
 # restore path to use regular compilers, just in case
-export PATH=${BASE_PATH}
+export PATH="/osxcross/bin:${BASE_PATH}"
 
 echo "Compiling windows release template"
 

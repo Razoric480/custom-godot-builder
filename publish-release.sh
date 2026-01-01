@@ -21,6 +21,6 @@ if ! gh auth status >/dev/null 2>&1; then
   exit 1
 fi
 
-gh release delete "learn-${GODOT_VERSION}" --repo=${PUBLISH_REPO}
+gh release delete "learn-${GODOT_VERSION}" --repo=${PUBLISH_REPO} -y
 gh release create "learn-${GODOT_VERSION}" --repo=${PUBLISH_REPO} --title "Godot Learn ${GODOT_VERSION}" --notes "Automated release of custom Godot templates ${GODOT_VERSION}"
 gh release upload "learn-${GODOT_VERSION}" "./build-output/godot-learn.${GODOT_VERSION}.templates.zip#Templates" "./build-output/godot-learn.${GODOT_VERSION}.headless.zip#Headless" "./build-output/godot-learn.${GODOT_VERSION}.editor.zip#Editor" --repo=${PUBLISH_REPO}

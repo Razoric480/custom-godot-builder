@@ -2,7 +2,7 @@ FROM fedora:43
 
 ENV GODOT_SDK_LINUX_X86_64=/x86_64-godot-linux-gnu_sdk-buildroot \
   PATH="/osxcross/bin:${PATH}" \
-  BASE_PATH=${PATH} \
+  BASE_PATH=/osxcross/bin:/root/.local/bin:/root/bin:/usr/local/bin:/usr/bin \
   OSXCROSS_ROOT=/osxcross \
   OSXCROSS_SDK_ROOT=/osxcross/SDK/MacOSX${OSX_SDK_VERSION}.sdk
 

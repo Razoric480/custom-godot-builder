@@ -7,7 +7,6 @@ rm -rf ./bin
 echo "Compiling headless"
 
 # make sure the x11 versions use the glibc 2.28 roots by godot team
-export BASE_PATH=${PATH}
 export PATH=${GODOT_SDK_LINUX_X86_64}/bin:${BASE_PATH}
 
 scons p=server target=release_debug lto=full tools=yes LINKFLAGS=-s
@@ -27,7 +26,7 @@ strip bin/godot.x11.opt.64
 chmod +x bin/godot.x11.opt.64
 
 # restore path to use regular compilers, just in case
-export PATH="/osxcross/bin:${BASE_PATH}"
+export PATH=${BASE_PATH}
 
 echo "Compiling windows release template"
 

@@ -65,7 +65,7 @@ echo "Building web export"
 
 source /emsdk/emsdk_env.sh
 
-scons p=javascript target=release optimize=speed disable_3d=true tools=no
+scons p=javascript target=release_debug optimize=speed disable_3d=true tools=no
 
 echo "Packing result"
 

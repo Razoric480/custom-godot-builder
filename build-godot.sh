@@ -3,7 +3,7 @@
 source ./.env
 
 if [[ ! "$(command -v podman)" ]]; then
-  echo "No podmasn CLI found - install podman"
+  echo "No podman CLI found - install podman"
   exit 1
 fi
 

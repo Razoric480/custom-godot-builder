@@ -65,7 +65,7 @@ echo "Packing result"
 
 GODOT_VERSION=$(/usr/bin/python3 -c "import pathlib; ns={}; exec(pathlib.Path('version.py').read_text(), ns); print(f\"{ns['major']}.{ns['minor']}.{ns['patch']}\")")
 
-zip -j /output/godot-learn.${GODOT_VERSION}.templates.zip bin/godot.windows.template_debug.x86_64.exe bin/godot.web.template_debug.wasm32.zip bin/godot.linuxbsd.template_debug.x86_64 bin/macos.zip
+zip -j /output/godot-learn.${GODOT_VERSION}.templates.zip bin/godot.windows.template_debug.x86_64.exe bin/godot.web.template_debug.wasm32.nothreads.zip bin/godot.linuxbsd.template_debug.x86_64 bin/macos.zip
 zip -j /output/godot-learn.${GODOT_VERSION}.editor.zip bin/godot.linuxbsd.editor.x86_64
 
 echo "Done compiling. Archived into /output"

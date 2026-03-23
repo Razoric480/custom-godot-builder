@@ -59,7 +59,7 @@ echo "Building web export"
 
 source /emsdk/emsdk_env.sh
 
-scons p=web target=template_debug disable_3d=true production=yes
+scons p=web target=template_debug disable_3d=true production=yes threads=no
 
 echo "Packing result"
 

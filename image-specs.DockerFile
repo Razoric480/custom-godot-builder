@@ -55,7 +55,7 @@ RUN dnf install -y --setopt=install_weak_deps=False \
   tar xvf MoltenVK-all.tar.xz && rm -f MoltenVK-all.tar.xz && mv MoltenVK/MoltenVK/include/ MoltenVK/ && mv MoltenVK/MoltenVK/static/MoltenVK.xcframework/ MoltenVK/ && popd && \
 
   # accesskit
-  mkdir /deps/accesskit && pushd /deps/accesskit && curl -L -o accesskit.zip https://github.com/godotengine/godot-accesskit-c-static/releases/download/0.18.0/accesskit-c-0.18.0.zip && \
+  mkdir /deps/accesskit && pushd /deps/accesskit && curl -L -o accesskit.zip https://github.com/godotengine/godot-accesskit-c-static/releases/download/0.18.0/accesskit-c-0.21.2.zip && \
   unzip -o accesskit.zip && rm -f accesskit.zip && mv accesskit-c-* accesskit-c && popd && \
 
   # angle
